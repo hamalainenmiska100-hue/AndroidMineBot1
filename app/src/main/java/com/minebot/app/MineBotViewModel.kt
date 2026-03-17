@@ -344,16 +344,6 @@ class MineBotViewModel(application: Application) : AndroidViewModel(application)
         prefs.setSelectedServerId(serverId)
     }
 
-    fun setConnectionType(type: ConnectionType) {
-        connectionType = type
-        prefs.setConnectionType(type)
-    }
-
-    fun setOfflineUsername(value: String) {
-        offlineUsername = value
-        prefs.setOfflineUsername(value)
-    }
-
     fun startBot() {
         val currentToken = token ?: return
         val server = selectedServer
