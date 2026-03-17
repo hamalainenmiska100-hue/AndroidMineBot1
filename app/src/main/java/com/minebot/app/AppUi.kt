@@ -435,14 +435,14 @@ private fun BotScreen(viewModel: MineBotViewModel, padding: PaddingValues) {
                 SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
                     SegmentedButton(
                         selected = viewModel.connectionType == ConnectionType.ONLINE,
-                        onClick = { viewModel.setConnectionType(ConnectionType.ONLINE) },
+                        onClick = { viewModel.connectionType = ConnectionType.ONLINE },
                         shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2)
                     ) {
                         Text("Online")
                     }
                     SegmentedButton(
                         selected = viewModel.connectionType == ConnectionType.OFFLINE,
-                        onClick = { viewModel.setConnectionType(ConnectionType.OFFLINE) },
+                        onClick = { onClick = { viewModel.connectionType = ConnectionType.OFFLINE },
                         shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2)
                     ) {
                         Text("Offline")
